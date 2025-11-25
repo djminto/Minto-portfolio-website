@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+   >
+    <link rel="stylesheet" href="Portfolio.css">
+    <title>Terms and Conditions | Minto's Web Development</title>
+    <style>
+        body {
+            cursor: default;
+        }
+        
+        .legal-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 12rem 5% 5rem;
+            background: var(--bg-color);
+            min-height: 100vh;
+        }
+        
+        .legal-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--main-color);
+        }
+        
+        .legal-header h1 {
+            font-size: 4rem;
+            color: var(--main-color);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 20px var(--shadow-color);
+        }
+        
+        .last-updated {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .legal-content {
+            background: var(--second-bg-color);
+            padding: 4rem;
+            border-radius: 15px;
+            border: 2px solid rgba(0, 238, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .legal-section {
+            margin-bottom: 3rem;
+        }
+        
+        .legal-section h2 {
+            font-size: 2.5rem;
+            color: var(--main-color);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .legal-section h3 {
+            font-size: 2rem;
+            color: var(--text-color);
+            margin: 2rem 0 1rem;
+        }
+        
+        .legal-section p, .legal-section li {
+            font-size: 1.5rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+        }
+        
+        .legal-section ul, .legal-section ol {
+            margin-left: 2rem;
+        }
+        
+        .legal-section li {
+            margin-bottom: 1rem;
+        }
+        
+        .highlight {
+            color: var(--main-color);
+            font-weight: 600;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.2rem 2.5rem;
+            background: linear-gradient(45deg, var(--main-color), #00a8ff);
+            color: var(--bg-color);
+            font-size: 1.5rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 3rem;
+            cursor: pointer;
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px var(--shadow-color);
+        }
+        
+        @media (max-width: 768px) {
+            .legal-container {
+                padding: 10rem 3% 3rem;
+            }
+            
+            .legal-header {
+                padding-bottom: 1.5rem;
+            }
+            
+            .legal-header h1 {
+                font-size: 2.5rem;
+                word-wrap: break-word;
+            }
+            
+            .legal-header h1 i {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-size: 3rem;
+            }
+            
+            .last-updated {
+                font-size: 1.2rem;
+            }
+            
+            .legal-content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .legal-section {
+                margin-bottom: 2rem;
+            }
+            
+            .legal-section h2 {
+                font-size: 1.8rem;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            
+            .legal-section h2 i {
+                font-size: 2rem;
+            }
+            
+            .legal-section h3 {
+                font-size: 1.6rem;
+            }
+            
+            .legal-section p,
+            .legal-section li {
+                font-size: 1.4rem;
+            }
+            
+            .legal-section ul,
+            .legal-section ol {
+                margin-left: 1.5rem;
+                padding-right: 0;
+            }
+            
+            .back-btn {
+                width: 100%;
+                justify-content: center;
+                padding: 1.5rem 2rem;
+                font-size: 1.4rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .legal-container {
+                padding: 9rem 2% 2rem;
+            }
+            
+            .legal-header h1 {
+                font-size: 2rem;
+            }
+            
+            .legal-header h1 i {
+                font-size: 2.5rem;
+            }
+            
+            .legal-content {
+                padding: 1.5rem 1rem;
+            }
+            
+            .legal-section h2 {
+                font-size: 1.6rem;
+            }
+            
+            .legal-section h3 {
+                font-size: 1.4rem;
+            }
+            
+            .legal-section p,
+            .legal-section li {
+                font-size: 1.3rem;
+            }
+            
+            .highlight {
+                display: inline-block;
+                word-break: break-word;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="logo"><img src="Images/Minto's Logo2.png" alt="Logo"></a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="legal-container">
+        <div class="legal-header">
+            <h1><i class="fas fa-file-contract"></i> Terms and Conditions</h1>
+            <p class="last-updated">Last Updated: November 24, 2025</p>
+        </div>
+
+        <div class="legal-content">
+            <div class="legal-section">
+                <h2><i class="fas fa-info-circle"></i> 1. Introduction</h2>
+                <p>Welcome to Minto's Web Development ("we," "us," or "our"). These Terms and Conditions govern your use of our website and services. By accessing or using our services, you agree to be bound by these terms.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-handshake"></i> 2. Services</h2>
+                <p>We provide web development, web design, digital marketing, and mentorship services. Our services include but are not limited to:</p>
+                <ul>
+                    <li>Custom website development and design</li>
+                    <li>E-commerce platform development</li>
+                    <li>Website maintenance and support</li>
+                    <li>SEO optimization and digital marketing</li>
+                    <li>Technical mentorship and consultation</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-file-signature"></i> 3. Order and Payment Terms</h2>
+                <h3>3.1 Project Quotes</h3>
+                <p>All project quotes are valid for 30 days from the date of issue. Prices are subject to change based on project scope modifications.</p>
+                
+                <h3>3.2 Payment Schedule</h3>
+                <ul>
+                    <li><span class="highlight">Deposit:</span> 50% upfront payment required before project commencement</li>
+                    <li><span class="highlight">Progress Payment:</span> 25% upon completion of design phase</li>
+                    <li><span class="highlight">Final Payment:</span> 25% upon project completion and client approval</li>
+                </ul>
+                
+                <h3>3.3 Accepted Payment Methods</h3>
+                <p>We accept payments via bank transfer, credit/debit cards, and mobile payment platforms. All payments are in Jamaican Dollars (JMD) unless otherwise specified.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-calendar-check"></i> 4. Project Timeline and Delivery</h2>
+                <p>Project timelines are estimates and may vary based on:</p>
+                <ul>
+                    <li>Client responsiveness and feedback</li>
+                    <li>Scope changes or additional requirements</li>
+                    <li>Technical complexities</li>
+                    <li>Third-party dependencies</li>
+                </ul>
+                <p>We commit to communicating any delays promptly and working to minimize project timeline extensions.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-redo"></i> 5. Revisions and Modifications</h2>
+                <h3>5.1 Included Revisions</h3>
+                <p>Each project package includes a specific number of revision rounds:</p>
+                <ul>
+                    <li>Basic Package: 2 revision rounds</li>
+                    <li>Professional Package: 3 revision rounds</li>
+                    <li>Enterprise Package: Unlimited revisions within project scope</li>
+                </ul>
+                
+                <h3>5.2 Additional Revisions</h3>
+                <p>Revisions beyond the included rounds will be charged at our hourly rate. Major scope changes may require a new project quote.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-copyright"></i> 6. Intellectual Property</h2>
+                <h3>6.1 Client Content</h3>
+                <p>You retain all rights to content you provide (text, images, logos, etc.). You grant us a license to use this content for the duration of the project.</p>
+                
+                <h3>6.2 Developed Work</h3>
+                <p>Upon full payment, all rights to the final website design and custom code are transferred to you. We retain the right to display the work in our portfolio unless otherwise agreed.</p>
+                
+                <h3>6.3 Third-Party Assets</h3>
+                <p>Any third-party assets (stock images, plugins, frameworks) used are subject to their respective licenses. We will inform you of any ongoing licensing requirements.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-ban"></i> 7. Cancellation and Refund Policy</h2>
+                <h3>7.1 Client Cancellation</h3>
+                <ul>
+                    <li>Before project start: Full refund minus 10% administrative fee</li>
+                    <li>After project start: Refund based on work completed, minimum 50% deposit retained</li>
+                    <li>After design approval: No refund available</li>
+                </ul>
+                
+                <h3>7.2 Our Right to Terminate</h3>
+                <p>We reserve the right to terminate projects due to non-payment, scope creep, or unprofessional conduct. Partial refunds may apply based on work completed.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-tools"></i> 8. Website Maintenance and Support</h2>
+                <p>All packages include post-launch support:</p>
+                <ul>
+                    <li>Basic: 1 month free support</li>
+                    <li>Professional: 3 months free support</li>
+                    <li>Enterprise: 6 months free support</li>
+                </ul>
+                <p>Extended maintenance packages are available for purchase separately.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-shield-alt"></i> 9. Warranties and Disclaimers</h2>
+                <h3>9.1 Our Warranty</h3>
+                <p>We warrant that services will be performed professionally and in accordance with industry standards. We guarantee bug-free functionality for 30 days post-launch.</p>
+                
+                <h3>9.2 Disclaimer</h3>
+                <p>We are not responsible for:</p>
+                <ul>
+                    <li>Issues arising from third-party services or hosting</li>
+                    <li>Damages from client modifications to the delivered work</li>
+                    <li>SEO rankings or traffic guarantees</li>
+                    <li>Content accuracy provided by the client</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-user-shield"></i> 10. Confidentiality</h2>
+                <p>We treat all client information as confidential. We will not disclose your business information, login credentials, or proprietary data to third parties without your consent.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-balance-scale"></i> 11. Limitation of Liability</h2>
+                <p>Our total liability for any claims arising from our services is limited to the amount paid by you for the specific service in question. We are not liable for indirect, incidental, or consequential damages.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-globe"></i> 12. Governing Law</h2>
+                <p>These terms are governed by the laws of Jamaica. Any disputes will be resolved in Jamaican courts.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-edit"></i> 13. Changes to Terms</h2>
+                <p>We reserve the right to update these terms at any time. Continued use of our services after changes constitutes acceptance of the new terms.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-envelope"></i> 14. Contact Information</h2>
+                <p>For questions about these terms, please contact us:</p>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> Email: <span class="highlight">danielminto13@gmail.com</span></li>
+                    <li><i class="fas fa-phone"></i> Phone: <span class="highlight">+1 (876) 386-4417</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> Location: <span class="highlight">Jamaica</span></li>
+                </ul>
+            </div>
+
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+    </div>
+
+    <!--Particles JS-->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Initialize Particles.js
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#0ef' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#0ef',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: { enable: true, mode: 'repulse' },
+                    onclick: { enable: true, mode: 'push' },
+                    resize: true
+                },
+                modes: {
+                    repulse: { distance: 100, duration: 0.4 },
+                    push: { particles_nb: 4 }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html>
