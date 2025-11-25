@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+   >
+    <link rel="stylesheet" href="Portfolio.css">
+    <title>Privacy Policy | Minto's Web Development</title>
+    <style>
+        body {
+            cursor: default;
+        }
+        
+        .legal-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 12rem 5% 5rem;
+            background: var(--bg-color);
+            min-height: 100vh;
+        }
+        
+        .legal-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--main-color);
+        }
+        
+        .legal-header h1 {
+            font-size: 4rem;
+            color: var(--main-color);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 20px var(--shadow-color);
+        }
+        
+        .last-updated {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .legal-content {
+            background: var(--second-bg-color);
+            padding: 4rem;
+            border-radius: 15px;
+            border: 2px solid rgba(0, 238, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .legal-section {
+            margin-bottom: 3rem;
+        }
+        
+        .legal-section h2 {
+            font-size: 2.5rem;
+            color: var(--main-color);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .legal-section h3 {
+            font-size: 2rem;
+            color: var(--text-color);
+            margin: 2rem 0 1rem;
+        }
+        
+        .legal-section p, .legal-section li {
+            font-size: 1.5rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+        }
+        
+        .legal-section ul, .legal-section ol {
+            margin-left: 2rem;
+        }
+        
+        .legal-section li {
+            margin-bottom: 1rem;
+        }
+        
+        .highlight {
+            color: var(--main-color);
+            font-weight: 600;
+        }
+        
+        .info-box {
+            background: rgba(0, 238, 255, 0.1);
+            border-left: 4px solid var(--main-color);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.2rem 2.5rem;
+            background: linear-gradient(45deg, var(--main-color), #00a8ff);
+            color: var(--bg-color);
+            font-size: 1.5rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 3rem;
+            cursor: pointer;
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px var(--shadow-color);
+        }
+        
+        @media (max-width: 768px) {
+            .legal-container {
+                padding: 10rem 3% 3rem;
+            }
+            
+            .legal-header {
+                padding-bottom: 1.5rem;
+            }
+            
+            .legal-header h1 {
+                font-size: 2.5rem;
+                word-wrap: break-word;
+            }
+            
+            .legal-header h1 i {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-size: 3rem;
+            }
+            
+            .last-updated {
+                font-size: 1.2rem;
+            }
+            
+            .legal-content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .legal-section {
+                margin-bottom: 2rem;
+            }
+            
+            .legal-section h2 {
+                font-size: 1.8rem;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            
+            .legal-section h2 i {
+                font-size: 2rem;
+            }
+            
+            .legal-section h3 {
+                font-size: 1.6rem;
+            }
+            
+            .legal-section p,
+            .legal-section li {
+                font-size: 1.4rem;
+            }
+            
+            .legal-section ul,
+            .legal-section ol {
+                margin-left: 1.5rem;
+                padding-right: 0;
+            }
+            
+            .info-box {
+                padding: 1.5rem;
+            }
+            
+            .back-btn {
+                width: 100%;
+                justify-content: center;
+                padding: 1.5rem 2rem;
+                font-size: 1.4rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .legal-container {
+                padding: 9rem 2% 2rem;
+            }
+            
+            .legal-header h1 {
+                font-size: 2rem;
+            }
+            
+            .legal-header h1 i {
+                font-size: 2.5rem;
+            }
+            
+            .legal-content {
+                padding: 1.5rem 1rem;
+            }
+            
+            .legal-section h2 {
+                font-size: 1.6rem;
+            }
+            
+            .legal-section h3 {
+                font-size: 1.4rem;
+            }
+            
+            .legal-section p,
+            .legal-section li {
+                font-size: 1.3rem;
+            }
+            
+            .info-box {
+                padding: 1rem;
+            }
+            
+            .highlight {
+                display: inline-block;
+                word-break: break-word;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="Homepage.html" class="logo"><img src="Images/Minto's Logo2.png" alt="Logo"></a>
+        <nav class="navbar">
+            <a href="Homepage.html">Home</a>
+            <a href="Homepage.html#about">About</a>
+            <a href="Homepage.html#services">Services</a>
+            <a href="Homepage.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="legal-container">
+        <div class="legal-header">
+            <h1><i class="fas fa-user-shield"></i> Privacy Policy</h1>
+            <p class="last-updated">Last Updated: November 24, 2025</p>
+        </div>
+
+        <div class="legal-content">
+            <div class="legal-section">
+                <h2><i class="fas fa-info-circle"></i> 1. Introduction</h2>
+                <p>At Minto's Web Development, we are committed to protecting your privacy and personal data. As a certified Data Protection Officer, I take data security seriously. This Privacy Policy explains how we collect, use, store, and protect your information.</p>
+                <div class="info-box">
+                    <p><strong><i class="fas fa-shield-alt"></i> Your Privacy Matters:</strong> We comply with international data protection standards and Jamaica's data privacy laws.</p>
+                </div>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-database"></i> 2. Information We Collect</h2>
+                <h3>2.1 Personal Information</h3>
+                <p>We collect the following personal information when you use our services:</p>
+                <ul>
+                    <li><span class="highlight">Contact Details:</span> Name, email address, phone number, company name</li>
+                    <li><span class="highlight">Account Information:</span> Username, password (encrypted), profile picture</li>
+                    <li><span class="highlight">Project Details:</span> Website requirements, business information, project descriptions</li>
+                    <li><span class="highlight">Payment Information:</span> Billing address, payment method (processed securely through third-party providers)</li>
+                    <li><span class="highlight">Communications:</span> Messages sent through contact forms, emails, or chatbot</li>
+                </ul>
+
+                <h3>2.2 Automatically Collected Information</h3>
+                <ul>
+                    <li><span class="highlight">Usage Data:</span> IP address, browser type, device information, pages visited</li>
+                    <li><span class="highlight">Cookies:</span> Session data, preferences, analytics information</li>
+                    <li><span class="highlight">Local Storage:</span> User preferences, login sessions, form data</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-check-circle"></i> 3. How We Use Your Information</h2>
+                <p>We use your personal information for the following purposes:</p>
+                <ul>
+                    <li><i class="fas fa-laptop-code"></i> <strong>Service Delivery:</strong> To provide web development services and fulfill project requirements</li>
+                    <li><i class="fas fa-envelope"></i> <strong>Communication:</strong> To respond to inquiries, send project updates, and provide customer support</li>
+                    <li><i class="fas fa-credit-card"></i> <strong>Payment Processing:</strong> To process payments and manage invoicing</li>
+                    <li><i class="fas fa-user-lock"></i> <strong>Account Management:</strong> To create and manage user accounts and profiles</li>
+                    <li><i class="fas fa-chart-line"></i> <strong>Service Improvement:</strong> To analyze usage patterns and improve our website and services</li>
+                    <li><i class="fas fa-bell"></i> <strong>Marketing:</strong> To send promotional materials (with your consent, which you can withdraw anytime)</li>
+                    <li><i class="fas fa-shield-alt"></i> <strong>Legal Compliance:</strong> To comply with legal obligations and protect our rights</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-cookie-bite"></i> 4. Cookies and Tracking Technologies</h2>
+                <h3>4.1 What We Use</h3>
+                <ul>
+                    <li><span class="highlight">Essential Cookies:</span> Required for website functionality (login sessions, form data)</li>
+                    <li><span class="highlight">Analytics Cookies:</span> Google Analytics to understand website usage</li>
+                    <li><span class="highlight">Local Storage:</span> Browser storage for user preferences and temporary data</li>
+                </ul>
+
+                <h3>4.2 Your Control</h3>
+                <p>You can control cookies through your browser settings. Note that disabling essential cookies may affect website functionality.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-share-alt"></i> 5. Information Sharing and Disclosure</h2>
+                <h3>5.1 We DO NOT Sell Your Data</h3>
+                <p>We never sell, rent, or trade your personal information to third parties for marketing purposes.</p>
+
+                <h3>5.2 When We Share Information</h3>
+                <p>We may share your information only in these limited circumstances:</p>
+                <ul>
+                    <li><span class="highlight">Service Providers:</span> Hosting providers, email services (EmailJS), payment processors - all under strict confidentiality agreements</li>
+                    <li><span class="highlight">Legal Requirements:</span> When required by law or to protect our legal rights</li>
+                    <li><span class="highlight">With Your Consent:</span> When you explicitly authorize us to share information</li>
+                    <li><span class="highlight">Business Transfers:</span> In the event of a merger or acquisition (with notice to you)</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-lock"></i> 6. Data Security</h2>
+                <p>We implement industry-standard security measures to protect your data:</p>
+                <ul>
+                    <li><i class="fas fa-key"></i> <strong>Encryption:</strong> SSL/TLS encryption for data transmission</li>
+                    <li><i class="fas fa-user-secret"></i> <strong>Password Protection:</strong> Encrypted password storage with hashing</li>
+                    <li><i class="fas fa-server"></i> <strong>Secure Storage:</strong> Data stored on secure servers with access controls</li>
+                    <li><i class="fas fa-shield-virus"></i> <strong>Regular Updates:</strong> Security patches and system updates</li>
+                    <li><i class="fas fa-user-lock"></i> <strong>Access Control:</strong> Limited employee access on need-to-know basis</li>
+                </ul>
+                <div class="info-box">
+                    <p><strong><i class="fas fa-exclamation-triangle"></i> Important:</strong> No method of transmission over the internet is 100% secure. While we strive to protect your data, we cannot guarantee absolute security.</p>
+                </div>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-clock"></i> 7. Data Retention</h2>
+                <p>We retain your personal information for as long as necessary:</p>
+                <ul>
+                    <li><span class="highlight">Active Projects:</span> Throughout the project duration and support period</li>
+                    <li><span class="highlight">Completed Projects:</span> Up to 7 years for legal and accounting purposes</li>
+                    <li><span class="highlight">Marketing Data:</span> Until you withdraw consent or request deletion</li>
+                    <li><span class="highlight">Inactive Accounts:</span> Deleted after 2 years of inactivity with prior notice</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-hands-helping"></i> 8. Your Rights</h2>
+                <p>You have the following rights regarding your personal data:</p>
+                <ul>
+                    <li><i class="fas fa-eye"></i> <strong>Access:</strong> Request a copy of the personal data we hold about you</li>
+                    <li><i class="fas fa-edit"></i> <strong>Correction:</strong> Request correction of inaccurate or incomplete data</li>
+                    <li><i class="fas fa-trash"></i> <strong>Deletion:</strong> Request deletion of your personal data (subject to legal obligations)</li>
+                    <li><i class="fas fa-ban"></i> <strong>Objection:</strong> Object to processing of your data for specific purposes</li>
+                    <li><i class="fas fa-download"></i> <strong>Portability:</strong> Request your data in a portable format</li>
+                    <li><i class="fas fa-hand-paper"></i> <strong>Withdraw Consent:</strong> Withdraw consent for marketing communications anytime</li>
+                    <li><i class="fas fa-pause"></i> <strong>Restriction:</strong> Request restriction of processing in certain circumstances</li>
+                </ul>
+                <p>To exercise these rights, contact us at <span class="highlight">danielminto13@gmail.com</span>. We will respond within 30 days.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-child"></i> 9. Children's Privacy</h2>
+                <p>Our services are not directed to individuals under 18 years of age. We do not knowingly collect personal information from children. If we discover we have collected information from a child, we will delete it immediately.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-globe-americas"></i> 10. International Data Transfers</h2>
+                <p>Your data may be transferred to and processed in countries outside Jamaica, including the United States (for cloud hosting and email services). We ensure adequate safeguards are in place for such transfers.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-link"></i> 11. Third-Party Links</h2>
+                <p>Our website may contain links to third-party websites (social media, hosting providers). We are not responsible for their privacy practices. We recommend reviewing their privacy policies.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-bell"></i> 12. Data Breach Notification</h2>
+                <p>In the unlikely event of a data breach that poses a risk to your rights and freedoms, we will notify you within 72 hours and report to relevant authorities as required by law.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-sync"></i> 13. Changes to This Policy</h2>
+                <p>We may update this Privacy Policy periodically. We will notify you of significant changes by:</p>
+                <ul>
+                    <li>Posting the updated policy on our website with a new "Last Updated" date</li>
+                    <li>Sending an email notification for material changes</li>
+                    <li>Requiring acceptance for changes that affect your rights</li>
+                </ul>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-question-circle"></i> 14. Contact Us</h2>
+                <p>For any privacy-related questions, concerns, or requests, please contact:</p>
+                <ul>
+                    <li><i class="fas fa-user"></i> <strong>Data Protection Officer:</strong> <span class="highlight">Daniel Minto</span></li>
+                    <li><i class="fas fa-envelope"></i> <strong>Email:</strong> <span class="highlight">danielminto13@gmail.com</span></li>
+                    <li><i class="fas fa-phone"></i> <strong>Phone:</strong> <span class="highlight">+1 (876) 386-4417</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> <span class="highlight">Jamaica</span></li>
+                </ul>
+                <p>We are committed to resolving any privacy concerns you may have.</p>
+            </div>
+
+            <div class="legal-section">
+                <h2><i class="fas fa-certificate"></i> 15. Compliance</h2>
+                <p>This Privacy Policy complies with:</p>
+                <ul>
+                    <li>Jamaica Data Protection Act</li>
+                    <li>General Data Protection Regulation (GDPR) principles</li>
+                    <li>International data protection best practices</li>
+                </ul>
+            </div>
+
+            <a href="Homepage.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+    </div>
+
+    <!--Particles JS-->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Initialize Particles.js
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#0ef' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#0ef',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: { enable: true, mode: 'repulse' },
+                    onclick: { enable: true, mode: 'push' },
+                    resize: true
+                },
+                modes: {
+                    repulse: { distance: 100, duration: 0.4 },
+                    push: { particles_nb: 4 }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html>

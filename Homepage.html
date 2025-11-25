@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!--Fontawesome-for-icons--->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+   >
+    <!--Custom Css-->
+    <link rel="stylesheet" href="Portfolio.css">
+
+    <title>Minto's Portfolio | Professional Web Developer</title>
+</head>
+<body>
+    <!-- Cursor Effect -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!--Header-->
+    <header class="header">
+        <!--Logo-->
+        <a href="#" class="logo"><img src="Images/Minto's Logo2.png" alt="Logo"></a>
+        
+        <!-- Digital Clock -->
+        <div class="digital-clock">
+            <div class="clock-time" id="clock"></div>
+            <div class="clock-date" id="date"></div>
+        </div>
+        
+        <!-- User Profile Widget (shown when logged in) -->
+        <div class="user-profile-widget" id="userProfileWidget" style="display: none;">
+            <div class="profile-greeting" id="profileGreeting">Welcome back!</div>
+            <div class="profile-dropdown">
+                <button class="profile-btn" id="profileBtn">
+                    <img src="Images/Minto's Logo2.png" alt="Profile" class="profile-avatar" id="profileAvatar">
+                    <span class="profile-name" id="profileName">User</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="profile-menu" id="profileMenu">
+                    <a href="#" onclick="editProfile()"><i class="fas fa-user-edit"></i> Edit Profile</a>
+                    <a href="Order.html"><i class="fas fa-shopping-cart"></i> Order Website</a>
+                    <a href="Dashboard.html" id="adminLink" style="display: none;"><i class="fas fa-user-shield"></i> Dashboard</a>
+                    <a href="#" onclick="logoutUser()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Login Button (shown when not logged in) -->
+        <a href="Login.html" class="login-btn" id="loginBtn">
+            <i class="fas fa-sign-in-alt"></i> Login
+        </a>
+        
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+<!--Menu Navigation-->
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="Order.html">Order Website</a>
+            <a href="#contact">Contact</a>
+            <a href="Resume.html">Resume</a>
+            <a href="Dashboard.html" style="color: #ff6b6b;"><i class="fas fa-user-shield"></i> Admin</a>
+        </nav>
+    </header>
+
+    <!--Home Section-->
+<section class="home" id="home">
+    <div class="home-content">
+        <h3 class="text-animate">Hello, My name is</h3>
+        <h1 class="glitch" data-text="Daniel Minto">Daniel Minto</h1>
+        <h3 class="text-animate">And I'm a <span class="multiple-text"></span></h3>
+        <p class="fade-in">I'm a Junior Web Developer who creates stunning, responsive and secure websites with modern technologies. Let's bring your vision to life!</p>
+    <div class="social-media">
+        <!--Linkedin-->
+        <a href="https://www.linkedin.com/in/daniel-minto-ba80a9271/" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+        <!--Github-->
+        <a href="https://github.com/djminto" class="social-icon"><i class="fa-brands fa-github"></i></a>
+        <!--Instagram-->
+        <a href="https://www.instagram.com/minto_web_design/" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+        <!--Whatsapp-->
+        <a href="https://wa.me/+18763864417" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+        <!--Email-->
+        <a href="mailto:danielminto13@gmail.com" class="social-icon"><i class="fa-regular fa-envelope"></i></a>
+    </div>
+
+    <div class="resume-buttons">
+        <a href="Resume.html" class="btn btn-3d">
+            <i class="fas fa-eye"></i> View Resume
+        </a>
+        <a href="Images/Minto Resume (1).pdf" class="btn btn-3d" download>
+            <i class="fas fa-download"></i> Download PDF
+        </a>
+    </div>
+    </div>
+    <div class="home-img">
+        <div class="img-box">
+            <img src="Images/Logo 1.2.png" alt="Daniel Minto - Web Developer">
+            <div class="liquid"></div>
+        </div>
+    </div>
+</section>
+
+<!--About section-->
+<section class="about" id="about">
+    <div class="about-img">
+        <div class="img-box-3d">
+            <img src="Images/School.png" alt="Daniel Minto">
+            <div class="rotate-border"></div>
+        </div>
+    </div>
+    <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3 class="subtitle-3d">Junior Web Developer!</h3>
+        <p>Experienced Web Developer skilled in all aspects of Web Development, from design to maintenance. 
+            Proficient in user interface design, testing, and debugging. Strong expertise in technologies such 
+            as ASP.NET, C#, CSS, HTML, JavaScript, React, and Microsoft SQL Server. Capable of managing independent projects while also collaborating effectively in team environments.</p>
+        
+        <div class="about-stats">
+            <div class="stat-box">
+                <h4>10+</h4>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-box">
+                <h4>100%</h4>
+                <p>Client Satisfaction</p>
+            </div>
+            <div class="stat-box">
+                <h4>2+</h4>
+                <p>Years Experience</p>
+            </div>
+        </div>
+        <a href="#contact" class="btn btn-3d">Let's Talk</a>
+    </div>
+</section>
+
+<!--Skills Section-->
+<section class="skills" id="skills">
+    <h2 class="heading">My <span>Skills</span></h2>
+    <p class="skills-subtitle">Technologies I work with</p>
+    
+    <div class="skills-container">
+        <div class="skill-box" data-skill="html">
+            <div class="skill-icon">
+                <i class="fab fa-html5"></i>
+            </div>
+            <h3>HTML5</h3>
+            <div class="skill-progress">
+                <div class="progress-bar" data-progress="95"></div>
+            </div>
+            <span class="skill-percentage">95%</span>
+        </div>
+
+        <div class="skill-box" data-skill="css">
+            <div class="skill-icon">
+                <i class="fab fa-css3-alt"></i>
+            </div>
+            <h3>CSS3</h3>
+            <div class="skill-progress">
+                <div class="progress-bar" data-progress="90"></div>
+            </div>
+            <span class="skill-percentage">90%</span>
+        </div>
+
+        <div class="skill-box" data-skill="javascript">
+            <div class="skill-icon">
+                <i class="fab fa-js"></i>
+            </div>
+            <h3>JavaScript</h3>
+            <div class="skill-progress">
+                <div class="progress-bar" data-progress="85"></div>
+            </div>
+            <span class="skill-percentage">85%</span>
+        </div>
+
+        <div class="skill-box" data-skill="react">
+            <div class="skill-icon">
+                <i class="fab fa-react"></i>
+            </div>
+            <h3>React</h3>
+            <div class="skill-progress">
+                <div class="progress-bar" data-progress="80"></div>
+            </div>
+            <span class="skill-percentage">80%</span>
+        </div>
+
+        <div class="skill-box" data-skill="csharp">
+            <div class="skill-icon">
+                <i class="fas fa-code"></i>
+            </div>
+            <h3>C#</h3>
+            <div class="skill-progress">
+                <div class="progress-bar" data-progress="85"></div>
+            </div>
+            <span class="skill-percentage">85%</span>
+        </div>
+
+        <div class="skill-box" data-skill="sql">
+            <div class="skill-icon">
+                <i class="fas fa-database"></i>
+            </div>
+            <h3>SQL Server</h3>
+            <div class="skill-progress">
+                <div class="progress-bar" data-progress="80"></div>
+            </div>
+            <span class="skill-percentage">80%</span>
+        </div>
+
+        <div class="skill-box" data-skill="git">
+            <div class="skill-icon">
+                <i class="fab fa-git-alt"></i>
+            </div>
+            <h3>Git</h3>
+            <div class="skill-progress">
+                <div class="progress-bar" data-progress="85"></div>
+            </div>
+            <span class="skill-percentage">85%</span>
+        </div>
+
+        <div class="skill-box" data-skill="aspnet">
+            <div class="skill-icon">
+                <i class="fas fa-project-diagram"></i>
+            </div>
+            <h3>ASP.NET</h3>
+            <div class="skill-progress">
+                <div class="progress-bar" data-progress="82"></div>
+            </div>
+            <span class="skill-percentage">82%</span>
+        </div>
+    </div>
+</section>
+
+<!--Services section-->
+<section class="services" id="services">
+    <h2 class="heading">My <span>Services</span></h2>
+
+    <div class="services-container">
+        <div class="services-box service-3d">
+            <div class="service-icon-wrapper">
+                <i class="fa-solid fa-code"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p>Proficient in creating and maintaining websites using HTML, CSS, and JavaScript,
+            using frameworks and libraries like React and ASP.NET.
+            </p>
+            <ul class="service-features">
+                <li><i class="fas fa-check"></i> Responsive Design</li>
+                <li><i class="fas fa-check"></i> Performance Optimization</li>
+                <li><i class="fas fa-check"></i> Cross-browser Compatible</li>
+            </ul>
+            <a href="#order" class="btn btn-3d">Order Now</a>
+        </div>
+
+        <div class="services-box service-3d">
+            <div class="service-icon-wrapper">
+                <i class="fa-solid fa-chart-simple"></i>
+            </div>
+            <h3>Digital Marketing</h3>
+            <p>Sleek and effective digital marketing strategies. 
+                By optimizing websites for search engines and social media platforms.
+            </p>
+            <ul class="service-features">
+                <li><i class="fas fa-check"></i> SEO Optimization</li>
+                <li><i class="fas fa-check"></i> Social Media Strategy</li>
+                <li><i class="fas fa-check"></i> Content Marketing</li>
+            </ul>
+            <a href="#order" class="btn btn-3d">Order Now</a>
+        </div>
+
+        <div class="services-box service-3d">
+            <div class="service-icon-wrapper">
+                <i class="fa-solid fa-handshake-angle"></i>
+            </div>
+            <h3>Mentorship</h3>
+            <p>Guiding and mentoring aspiring web developers, 
+             with support to help them become proficient in web development.
+            </p>
+            <ul class="service-features">
+                <li><i class="fas fa-check"></i> One-on-One Sessions</li>
+                <li><i class="fas fa-check"></i> Code Reviews</li>
+                <li><i class="fas fa-check"></i> Career Guidance</li>
+            </ul>
+            <a href="#contact" class="btn btn-3d">Get Started</a>
+        </div>
+
+        <div class="services-box service-3d">
+            <div class="service-icon-wrapper">
+                <i class="fa-brands fa-figma"></i>
+            </div>
+            <h3>Web Design</h3>
+            <p>Designing beautiful and intuitive user interfaces with modern aesthetics, 
+        and responsive layouts using HTML, CSS, and JavaScript.
+            </p>
+            <ul class="service-features">
+                <li><i class="fas fa-check"></i> UI/UX Design</li>
+                <li><i class="fas fa-check"></i> Prototyping</li>
+                <li><i class="fas fa-check"></i> Brand Identity</li>
+            </ul>
+            <a href="#order" class="btn btn-3d">Order Now</a>
+        </div>
+    </div>
+</section>
+
+<!--Projects section-->
+<section class="projects" id="projects">
+    <h2 class="heading">My <span>Projects</span></h2>
+    <p class="projects-subtitle">Recent work that showcases my expertise</p>
+    
+    <div class="portfolio-container">
+   
+        <div class="portfolio-box portfolio-3d">
+            <img src="Images/Zoie's Accessories.png" alt="Zoie's Accessories Website">
+            <div class="portfolio-layer">
+                <h4>Zoie's Accessories</h4>
+                <p>A responsive e-commerce website for a fashion company with shopping cart and payment integration.</p>
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" title="View Project"><i class="fa-solid fa-link"></i></a>
+                    <a href="#" title="View Code"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-box portfolio-3d">
+            <img src="Images/Starbucks webpage.png" alt="Starbucks Website Clone">
+            <div class="portfolio-layer">
+                <h4>Starbucks</h4>
+                <p>A responsive e-commerce website for a coffee company. (Testing in progress)</p>
+                <div class="project-tech">
+                    <span>React</span>
+                    <span>CSS3</span>
+                    <span>API</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" title="View Project"><i class="fa-solid fa-link"></i></a>
+                    <a href="#" title="View Code"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-box portfolio-3d">
+            <img src="Images/Hardware Webpage.png" alt="A&J Ideal Hardware Website">
+            <div class="portfolio-layer">
+                <h4>A&J Ideal Hardware</h4>
+                <p>A responsive e-commerce website for a hardware company with product catalog and inventory management.</p>
+                <div class="project-tech">
+                    <span>ASP.NET</span>
+                    <span>C#</span>
+                    <span>SQL</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" title="View Project"><i class="fa-solid fa-link"></i></a>
+                    <a href="#" title="View Code"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Order Website Section-->
+<section class="order" id="order">
+    <h2 class="heading">Order Your <span>Website</span></h2>
+    <p class="order-subtitle">Professional web development services at competitive prices</p>
+    
+    <div class="pricing-container">
+        <div class="pricing-box pricing-3d">
+            <div class="pricing-header">
+                <h3>Basic</h3>
+                <div class="price">
+                    <span class="currency">JMD</span>
+                    <span class="amount">80K</span>
+                    <span class="period">- 150K</span>
+                </div>
+            </div>
+            <ul class="pricing-features">
+                <li><i class="fas fa-check"></i> Single Page Website</li>
+                <li><i class="fas fa-check"></i> Responsive Design</li>
+                <li><i class="fas fa-check"></i> Basic SEO Setup</li>
+                <li><i class="fas fa-check"></i> Contact Form</li>
+                <li><i class="fas fa-check"></i> 1 Month Support</li>
+                <li><i class="fas fa-check"></i> Social Media Integration</li>
+            </ul>
+            <p class="delivery-time"><i class="fas fa-clock"></i> 1-2 weeks delivery</p>
+            <a href="Order.html?package=basic" class="btn btn-3d">Get Started</a>
+        </div>
+
+        <div class="pricing-box pricing-3d featured">
+            <div class="badge">Most Popular</div>
+            <div class="pricing-header">
+                <h3>Professional</h3>
+                <div class="price">
+                    <span class="currency">JMD</span>
+                    <span class="amount">200K</span>
+                    <span class="period">- 500K</span>
+                </div>
+            </div>
+            <ul class="pricing-features">
+                <li><i class="fas fa-check"></i> Multi-Page Website (5-10 pages)</li>
+                <li><i class="fas fa-check"></i> Custom Design</li>
+                <li><i class="fas fa-check"></i> Advanced SEO</li>
+                <li><i class="fas fa-check"></i> Database Integration</li>
+                <li><i class="fas fa-check"></i> Content Management System</li>
+                <li><i class="fas fa-check"></i> 3 Months Support</li>
+                <li><i class="fas fa-check"></i> Analytics Setup</li>
+            </ul>
+            <p class="delivery-time"><i class="fas fa-clock"></i> 3-4 weeks delivery</p>
+            <a href="Order.html?package=professional" class="btn btn-3d">Get Started</a>
+        </div>
+
+        <div class="pricing-box pricing-3d">
+            <div class="pricing-header">
+                <h3>Enterprise</h3>
+                <div class="price">
+                    <span class="currency">JMD</span>
+                    <span class="amount">600K</span>
+                    <span class="period">+</span>
+                </div>
+            </div>
+            <ul class="pricing-features">
+                <li><i class="fas fa-check"></i> E-commerce Platform</li>
+                <li><i class="fas fa-check"></i> Custom Web Application</li>
+                <li><i class="fas fa-check"></i> Advanced Features</li>
+                <li><i class="fas fa-check"></i> Payment Gateway Integration</li>
+                <li><i class="fas fa-check"></i> User Authentication</li>
+                <li><i class="fas fa-check"></i> 6 Months Support</li>
+                <li><i class="fas fa-check"></i> Priority Support</li>
+                <li><i class="fas fa-check"></i> Training Included</li>
+            </ul>
+            <p class="delivery-time"><i class="fas fa-clock"></i> 6-8 weeks delivery</p>
+            <a href="Order.html?package=enterprise" class="btn btn-3d">Get Started</a>
+        </div>
+    </div>
+
+    <div class="order-note">
+        <p><i class="fas fa-info-circle"></i> All packages include free hosting setup assistance and SSL certificate installation. Custom packages available upon request.</p>
+    </div>
+</section>
+
+<!--Contact section-->
+<section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me</span></h2>
+    <p class="contact-subtitle">Let's work together on your next project</p>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <div class="info-box">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>danielminto13@gmail.com</p>
+            </div>
+            <div class="info-box">
+                <i class="fas fa-phone"></i>
+                <h3>Phone</h3>
+                <p>+1 (876) 386-4417</p>
+            </div>
+            <div class="info-box">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Location</h3>
+                <p>Available Worldwide</p>
+            </div>
+            <div class="info-box">
+                <i class="fas fa-clock"></i>
+                <h3>Response Time</h3>
+                <p>Within 24 hours</p>
+            </div>
+        </div>
+
+        <form action="#" class="contact-form-3d" id="contactForm">
+            <div class="input-box">
+                <input type="text" id="contactName" name="contactName" placeholder="Full Name" autocomplete="name" required>
+                <input type="email" id="contactEmail" name="contactEmail" placeholder="Email Address" autocomplete="email" required>
+            </div>
+
+            <div class="input-box">
+                <input type="tel" id="contactPhone" name="contactPhone" placeholder="Telephone Number" autocomplete="tel" required>
+                <input type="text" id="contactSubject" name="contactSubject" placeholder="Email Subject" required>
+            </div>
+            <textarea id="contactMessage" name="contactMessage" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message" class="btn btn-3d">
+        </form>
+    </div>
+</section>
+
+<!--Footer section-->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-text">
+            <p>Copyright &copy; 2025 by Minto's Web Design <i class="fa-solid fa-laptop-code" style="color:deepskyblue;"></i> | All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="Terms.html">Terms & Conditions</a>
+                <span>|</span>
+                <a href="Privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/daniel-minto-ba80a9271/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/djminto"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/minto_web_design/"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+    </div>
+</footer>
+
+<!-- AI Chatbot Assistant -->
+<div class="chatbot-container" id="chatbot">
+    <div class="chatbot-header">
+        <div class="chatbot-avatar">
+            <i class="fas fa-robot"></i>
+        </div>
+        <div class="chatbot-title">
+            <h4>Minto's Assistant</h4>
+            <span class="status">Online</span>
+        </div>
+        <button class="chatbot-close" id="closeChatbot">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    
+    <div class="chatbot-messages" id="chatMessages">
+        <div class="message bot-message">
+            <div class="message-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="message-content">
+                <p>Hi! I'm Minto's AI assistant. How can I help you today?</p>
+                <div class="quick-replies">
+                    <button class="quick-reply" data-message="What services do you offer?">Services</button>
+                    <button class="quick-reply" data-message="What are your prices?">Pricing</button>
+                    <button class="quick-reply" data-message="How can I contact you?">Contact</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="chatbot-input">
+        <input type="text" id="chatInput" placeholder="Type your message...">
+        <button id="sendMessage">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+</div>
+
+<button class="chatbot-toggle" id="chatbotToggle">
+    <i class="fas fa-comments"></i>
+    <span class="chatbot-badge">1</span>
+</button>
+
+<!--Particles JS-->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<!--Scroll Reveal-->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<!--Typing Js-->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<!--EmailJS-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!--Javascript-->
+<script src="Portfolio.js"></script>
+
+</body>
+</html>

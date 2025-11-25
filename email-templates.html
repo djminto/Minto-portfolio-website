@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmailJS Templates - Minto's Web Development</title>
+</head>
+<body>
+    <!-- 
+    ================================================================
+    TEMPLATE 1: CONTACT FORM NOTIFICATION (Admin Notification)
+    Template Name: contact_form_notification
+    Use this for: Homepage contact form submissions
+    ================================================================
+    -->
+    <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 0 auto; background: linear-gradient(135deg, #1f242d 0%, #323946 100%); color: #ffffff; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);">
+        
+        <!-- Header -->
+        <div style="background: linear-gradient(135deg, #0ef 0%, #00a8ff 100%); padding: 30px; text-align: center; border-bottom: 3px solid #0ef;">
+            <h1 style="margin: 0; font-size: 28px; color: #1f242d; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
+                💬 New Contact Message
+            </h1>
+            <p style="margin: 10px 0 0; font-size: 14px; color: #1f242d; opacity: 0.9;">
+                You've received a new inquiry from your website
+            </p>
+        </div>
+        
+        <!-- Main Content -->
+        <div style="padding: 40px 30px;">
+            
+            <!-- Intro Text -->
+            <p style="font-size: 16px; line-height: 1.6; color: rgba(255, 255, 255, 0.9); margin-bottom: 30px;">
+                A potential client has reached out through your contact form. Here are the details:
+            </p>
+            
+            <!-- Contact Details Card -->
+            <div style="background: rgba(0, 238, 255, 0.1); border-left: 4px solid #0ef; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+                
+                <!-- Name -->
+                <div style="margin-bottom: 20px;">
+                    <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                        <span style="font-size: 20px; margin-right: 10px;">👤</span>
+                        <strong style="color: #0ef; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Name</strong>
+                    </div>
+                    <div style="font-size: 18px; color: #ffffff; padding-left: 30px;">
+                        {{from_name}}
+                    </div>
+                </div>
+                
+                <!-- Email -->
+                <div style="margin-bottom: 20px;">
+                    <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                        <span style="font-size: 20px; margin-right: 10px;">📧</span>
+                        <strong style="color: #0ef; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Email</strong>
+                    </div>
+                    <div style="font-size: 18px; padding-left: 30px;">
+                        <a href="mailto:{{reply_to}}" style="color: #00a8ff; text-decoration: none; border-bottom: 2px solid #00a8ff;">
+                            {{from_email}}
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Phone -->
+                <div style="margin-bottom: 20px;">
+                    <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                        <span style="font-size: 20px; margin-right: 10px;">📱</span>
+                        <strong style="color: #0ef; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Phone</strong>
+                    </div>
+                    <div style="font-size: 18px; color: #ffffff; padding-left: 30px;">
+                        <a href="tel:{{phone}}" style="color: #00a8ff; text-decoration: none;">
+                            {{phone}}
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Subject -->
+                <div>
+                    <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                        <span style="font-size: 20px; margin-right: 10px;">📋</span>
+                        <strong style="color: #0ef; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Subject</strong>
+                    </div>
+                    <div style="font-size: 18px; color: #ffffff; padding-left: 30px;">
+                        {{subject}}
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Message Card -->
+            <div style="background: #323946; border: 2px solid rgba(0, 238, 255, 0.3); border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <span style="font-size: 22px; margin-right: 10px;">💬</span>
+                    <strong style="color: #0ef; font-size: 16px; text-transform: uppercase; letter-spacing: 1px;">Message</strong>
+                </div>
+                <div style="font-size: 16px; line-height: 1.8; color: rgba(255, 255, 255, 0.9); padding: 15px; background: rgba(0, 0, 0, 0.2); border-radius: 8px; white-space: pre-wrap;">{{message}}</div>
+            </div>
+            
+            <!-- Action Button -->
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="mailto:{{reply_to}}?subject=Re: {{subject}}" style="display: inline-block; background: linear-gradient(135deg, #0ef 0%, #00a8ff 100%); color: #1f242d; font-size: 16px; font-weight: bold; padding: 15px 40px; border-radius: 50px; text-decoration: none; box-shadow: 0 5px 20px rgba(0, 238, 255, 0.4); transition: all 0.3s;">
+                    📧 Reply to {{from_name}}
+                </a>
+            </div>
+            
+        </div>
+        
+        <!-- Footer -->
+        <div style="background: #1f242d; padding: 25px; text-align: center; border-top: 2px solid rgba(0, 238, 255, 0.2);">
+            <p style="margin: 0 0 10px; font-size: 14px; color: rgba(255, 255, 255, 0.7);">
+                This message was sent from your portfolio website contact form
+            </p>
+            <p style="margin: 0; font-size: 13px; color: rgba(255, 255, 255, 0.5);">
+                © 2025 Minto's Web Development | All Rights Reserved
+            </p>
+        </div>
+        
+    </div>
+
+    <!-- 
+    ================================================================
+    TEMPLATE 2: CONTACT CONFIRMATION (Client Auto-Reply)
+    Template Name: contact_confirmation
+    Use this for: Automatic reply to clients who submit contact form
+    ================================================================
+    -->
+    
+    <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 50px auto 0; background: linear-gradient(135deg, #1f242d 0%, #323946 100%); color: #ffffff; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);">
+        
+        <!-- Header -->
+        <div style="background: linear-gradient(135deg, #0ef 0%, #00a8ff 100%); padding: 40px 30px; text-align: center;">
+            <div style="font-size: 60px; margin-bottom: 15px;">✅</div>
+            <h1 style="margin: 0; font-size: 32px; color: #1f242d; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
+                Message Received!
+            </h1>
+            <p style="margin: 10px 0 0; font-size: 16px; color: #1f242d; opacity: 0.9;">
+                Thank you for reaching out
+            </p>
+        </div>
+        
+        <!-- Main Content -->
+        <div style="padding: 40px 30px;">
+            
+            <!-- Greeting -->
+            <p style="font-size: 20px; line-height: 1.6; color: #ffffff; margin-bottom: 20px;">
+                Hi <strong style="color: #0ef;">{{from_name}}</strong>,
+            </p>
+            
+            <p style="font-size: 16px; line-height: 1.8; color: rgba(255, 255, 255, 0.9); margin-bottom: 25px;">
+                Thank you for contacting <strong style="color: #0ef;">Minto's Web Development</strong>! I've received your message and will get back to you within <strong style="color: #0ef;">24 hours</strong>.
+            </p>
+            
+            <!-- Message Summary -->
+            <div style="background: rgba(0, 238, 255, 0.1); border-left: 4px solid #0ef; border-radius: 10px; padding: 25px; margin-bottom: 30px;">
+                <p style="margin: 0 0 15px; font-size: 14px; color: #0ef; text-transform: uppercase; letter-spacing: 1px;">
+                    <strong>Your Message Summary:</strong>
+                </p>
+                <div style="margin-bottom: 12px;">
+                    <strong style="color: #0ef;">Subject:</strong> 
+                    <span style="color: rgba(255, 255, 255, 0.9);">{{subject}}</span>
+                </div>
+                <div style="padding: 15px; background: rgba(0, 0, 0, 0.2); border-radius: 8px; font-size: 15px; line-height: 1.6; color: rgba(255, 255, 255, 0.8); white-space: pre-wrap;">{{message}}</div>
+            </div>
+            
+            <!-- What's Next -->
+            <div style="background: #323946; border: 2px solid rgba(0, 238, 255, 0.3); border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+                <h2 style="margin: 0 0 15px; font-size: 20px; color: #0ef;">
+                    🚀 What Happens Next?
+                </h2>
+                <ul style="margin: 0; padding-left: 20px; line-height: 2; color: rgba(255, 255, 255, 0.9);">
+                    <li>I'll review your inquiry carefully</li>
+                    <li>You'll receive a detailed response within 24 hours</li>
+                    <li>We can schedule a consultation if needed</li>
+                    <li>I'll answer all your questions and discuss next steps</li>
+                </ul>
+            </div>
+            
+            <!-- Contact Info -->
+            <div style="text-align: center; padding: 20px; background: rgba(0, 238, 255, 0.05); border-radius: 10px;">
+                <p style="margin: 0 0 15px; font-size: 14px; color: rgba(255, 255, 255, 0.7);">
+                    Need immediate assistance?
+                </p>
+                <div style="font-size: 16px; color: #0ef; margin-bottom: 8px;">
+                    📧 <a href="mailto:danielminto13@gmail.com" style="color: #0ef; text-decoration: none;">danielminto13@gmail.com</a>
+                </div>
+                <div style="font-size: 16px; color: #0ef;">
+                    📱 <a href="tel:+18763864417" style="color: #0ef; text-decoration: none;">+1 (876) 386-4417</a>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Footer -->
+        <div style="background: #1f242d; padding: 30px; text-align: center; border-top: 2px solid rgba(0, 238, 255, 0.2);">
+            <p style="margin: 0 0 15px; font-size: 16px; color: rgba(255, 255, 255, 0.9);">
+                Follow me on social media
+            </p>
+            <div style="margin-bottom: 20px;">
+                <a href="https://www.linkedin.com/in/daniel-minto-ba80a9271/" style="display: inline-block; margin: 0 10px; color: #0ef; text-decoration: none; font-size: 24px;">💼</a>
+                <a href="https://github.com/djminto" style="display: inline-block; margin: 0 10px; color: #0ef; text-decoration: none; font-size: 24px;">💻</a>
+                <a href="https://www.instagram.com/minto_web_design/" style="display: inline-block; margin: 0 10px; color: #0ef; text-decoration: none; font-size: 24px;">📸</a>
+            </div>
+            <p style="margin: 0; font-size: 13px; color: rgba(255, 255, 255, 0.5);">
+                © 2025 Minto's Web Development | All Rights Reserved
+            </p>
+            <p style="margin: 10px 0 0; font-size: 12px; color: rgba(255, 255, 255, 0.4);">
+                <a href="#" style="color: #0ef; text-decoration: none;">Privacy Policy</a> | 
+                <a href="#" style="color: #0ef; text-decoration: none;">Terms & Conditions</a>
+            </p>
+        </div>
+        
+    </div>
+
+    <!-- 
+    ================================================================
+    INSTRUCTIONS FOR EMAILJS SETUP:
+    ================================================================
+    
+    TEMPLATE 1: Contact Form Notification (Admin)
+    ------------------------------------------------
+    Template Name: contact_form_notification
+    
+    Variables needed:
+    - {{from_name}} - Client's full name
+    - {{from_email}} - Client's email
+    - {{reply_to}} - Client's email (for reply)
+    - {{phone}} - Client's phone number
+    - {{subject}} - Email subject
+    - {{message}} - Message content
+    
+    To: danielminto13@gmail.com (your email)
+    From: Your service email
+    Reply-To: {{reply_to}}
+    
+    
+    TEMPLATE 2: Contact Confirmation (Client Auto-Reply)
+    -----------------------------------------------------
+    Template Name: contact_confirmation
+    
+    Variables needed:
+    - {{from_name}} - Client's name
+    - {{subject}} - Their inquiry subject
+    - {{message}} - Their message
+    
+    To: {{from_email}} (client's email)
+    From: danielminto13@gmail.com
+    Reply-To: danielminto13@gmail.com
+    
+    ================================================================
+    -->
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmailJS Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #1f242d;
+            color: #fff;
+        }
+        button {
+            background: #0ef;
+            color: #1f242d;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #00d4e0;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .success {
+            background: rgba(76, 175, 80, 0.2);
+            border: 2px solid #4caf50;
+        }
+        .error {
+            background: rgba(255, 107, 107, 0.2);
+            border: 2px solid #ff6b6b;
+        }
+    </style>
+</head>
+<body>
+    <h1>EmailJS Connection Test</h1>
+    <p>Click the button to test if EmailJS is properly configured and can send emails to danielminto13@gmail.com</p>
+    
+    <button onclick="testEmail()">Send Test Email</button>
+    
+    <div id="result"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        async function testEmail() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '⏳ Sending test email...';
+            resultDiv.className = '';
+            
+            const EMAILJS_PUBLIC_KEY = 'YVvnU5ulJ_2GW0rW4';
+            const EMAILJS_SERVICE_ID = 'service_seli6gr';
+            const EMAILJS_TEMPLATE_ID = 'template_k597rol';
+            
+            try {
+                // Initialize EmailJS
+                emailjs.init(EMAILJS_PUBLIC_KEY);
+                
+                // Simple test parameters - MUST include to_email for recipient
+                const testParams = {
+                    to_email: 'danielminto13@gmail.com',  // REQUIRED: Recipient email
+                    to_name: 'Daniel Minto',
+                    from_name: 'Test System',
+                    from_email: 'test@example.com',
+                    order_number: 'TEST-' + Date.now(),
+                    client_name: 'Test Client',
+                    client_email: 'test@example.com',
+                    client_phone: '876-123-4567',
+                    client_company: 'Test Company',
+                    package_type: 'PROFESSIONAL',
+                    website_type: 'E-Commerce',
+                    num_pages: '10',
+                    features: 'Responsive Design, 3D Animations',
+                    description: 'This is a test order to verify EmailJS configuration',
+                    budget: 'JMD 200,000',
+                    deadline: '2025-12-31',
+                    payment_method: 'Credit Card',
+                    amount: 'JMD 250,000',
+                    date: new Date().toLocaleString(),
+                    reply_to: 'test@example.com',
+                    message: 'This is a test message to verify EmailJS is working correctly.'
+                };
+                
+                console.log('Sending test with params:', testParams);
+                
+                const response = await emailjs.send(
+                    EMAILJS_SERVICE_ID,
+                    EMAILJS_TEMPLATE_ID,
+                    testParams
+                );
+                
+                console.log('Success:', response);
+                
+                resultDiv.innerHTML = `
+                    <strong>✅ SUCCESS!</strong><br>
+                    Test email sent successfully to danielminto13@gmail.com<br>
+                    <br>
+                    Response Status: ${response.status}<br>
+                    Response Text: ${response.text}<br>
+                    <br>
+                    Check your inbox at danielminto13@gmail.com (and spam folder!)
+                `;
+                resultDiv.className = 'success';
+                
+            } catch (error) {
+                console.error('Error:', error);
+                
+                resultDiv.innerHTML = `
+                    <strong>❌ ERROR</strong><br>
+                    Failed to send test email<br>
+                    <br>
+                    <strong>Error Message:</strong> ${error.message || error.text || 'Unknown error'}<br>
+                    <strong>Status:</strong> ${error.status || 'N/A'}<br>
+                    <br>
+                    <strong>Possible Issues:</strong><br>
+                    1. Email template variables don't match<br>
+                    2. Service ID or Template ID is incorrect<br>
+                    3. Gmail service not verified in EmailJS<br>
+                    4. Public Key is invalid<br>
+                    5. Template "To Email" field not set to {{to_email}}<br>
+                    <br>
+                    <strong>Next Steps:</strong><br>
+                    - Check EmailJS dashboard at emailjs.com<br>
+                    - Verify your service is active<br>
+                    - In template settings, set "To Email" to: {{to_email}}<br>
+                    - Make sure Gmail is connected and verified
+                `;
+                resultDiv.className = 'error';
+            }
+        }
+    </script>
+</body>
+</html>

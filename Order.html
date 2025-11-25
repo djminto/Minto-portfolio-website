@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+   >
+    <link rel="stylesheet" href="Order.css">
+    <title>Order Website | Minto's Web Development</title>
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="Homepage.html" class="logo"><img src="Images/Minto's Logo2.png" alt="Logo"></a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="Homepage.html">Home</a>
+            <a href="Homepage.html#about">About</a>
+            <a href="Homepage.html#services">Services</a>
+            <a href="#order-form" class="active">Order</a>
+            <a href="Dashboard.html" class="admin-link"><i class="fas fa-user-shield"></i> Admin</a>
+        </nav>
+    </header>
+
+    <!-- Order Section -->
+    <section class="order-section" id="order-form">
+        <div class="container">
+            <h1 class="section-title">
+                <i class="fas fa-shopping-cart"></i>
+                Order Your Website
+            </h1>
+            <p class="section-subtitle">Let's bring your vision to life with a professional website</p>
+
+            <!-- Order Form -->
+            <div class="order-content">
+                <div class="form-container">
+                    <form id="orderForm" class="order-form">
+                        <div class="form-step active" data-step="1">
+                            <h2><i class="fas fa-info-circle"></i> Project Information</h2>
+                            
+                            <div class="form-group">
+                                <label for="packageType">Select Package *</label>
+                                <select id="packageType" name="packageType" autocomplete="off" required>
+                                    <option value="">Choose a package...</option>
+                                    <option value="basic" data-price="80000">Basic Website - JMD 80,000 - 150,000</option>
+                                    <option value="professional" data-price="200000">Professional Website - JMD 200,000 - 500,000</option>
+                                    <option value="enterprise" data-price="600000">Enterprise Website - JMD 600,000+</option>
+                                    <option value="custom">Custom Quote</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="websiteType">Website Type *</label>
+                                <select id="websiteType" name="websiteType" autocomplete="off" required>
+                                    <option value="">Select type...</option>
+                                    <option value="portfolio">Portfolio/Personal</option>
+                                    <option value="business">Business Website</option>
+                                    <option value="ecommerce">E-Commerce</option>
+                                    <option value="blog">Blog/News</option>
+                                    <option value="landing">Landing Page</option>
+                                    <option value="custom">Custom Application</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="numPages">Number of Pages *</label>
+                                <input type="number" id="numPages" name="numPages" min="1" max="50" placeholder="e.g., 5" autocomplete="off" required>
+                            </div>
+
+                            <div class="form-group">
+                                <fieldset style="border: none; padding: 0; margin: 0;">
+                                    <legend style="font-size: 1.1rem; font-weight: 500; margin-bottom: 0.8rem;">Features Required</legend>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" id="feature-responsive" name="features" value="responsive"> Responsive Design</label>
+                                    <label><input type="checkbox" id="feature-animation" name="features" value="animation"> 3D Animations</label>
+                                    <label><input type="checkbox" id="feature-cms" name="features" value="cms"> Content Management</label>
+                                    <label><input type="checkbox" id="feature-ecommerce" name="features" value="ecommerce"> E-Commerce Integration</label>
+                                    <label><input type="checkbox" id="feature-seo" name="features" value="seo"> SEO Optimization</label>
+                                    <label><input type="checkbox" id="feature-analytics" name="features" value="analytics"> Analytics Integration</label>
+                                    <label><input type="checkbox" id="feature-chatbot" name="features" value="chatbot"> AI Chatbot</label>
+                                    <label><input type="checkbox" id="feature-payment" name="features" value="payment"> Payment Gateway</label>
+                                </div>
+                                </fieldset>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="description">Project Description *</label>
+                                <textarea id="description" name="description" rows="5" placeholder="Describe your project, goals, and any specific requirements..." autocomplete="off" required></textarea>
+                            </div>
+
+                            <button type="button" class="btn-next" onclick="nextStep()">
+                                Next <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="form-step" data-step="2">
+                            <h2><i class="fas fa-user"></i> Contact Information</h2>
+
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="John Doe" autocomplete="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" autocomplete="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="876-XXX-XXXX" autocomplete="tel" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company">Company Name (Optional)</label>
+                                <input type="text" id="company" name="company" placeholder="Your Company" autocomplete="organization">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="deadline">Preferred Completion Date</label>
+                                <input type="date" id="deadline" name="deadline" autocomplete="off">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="budget">Budget Range (JMD)</label>
+                                <input type="text" id="budget" name="budget" placeholder="e.g., 100,000 - 200,000" autocomplete="off">
+                            </div>
+
+                            <div class="form-buttons">
+                                <button type="button" class="btn-prev" onclick="prevStep()">
+                                    <i class="fas fa-arrow-left"></i> Back
+                                </button>
+                                <button type="button" class="btn-next" onclick="nextStep()">
+                                    Next <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-step" data-step="3">
+                            <h2><i class="fas fa-credit-card"></i> Payment Information</h2>
+                            
+                            <div class="payment-summary">
+                                <h3>Order Summary</h3>
+                                <div class="summary-item">
+                                    <span>Package:</span>
+                                    <span id="summaryPackage">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Website Type:</span>
+                                    <span id="summaryType">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Number of Pages:</span>
+                                    <span id="summaryPages">-</span>
+                                </div>
+                                <div class="summary-item total">
+                                    <span>Estimated Total:</span>
+                                    <span id="summaryTotal">JMD 0</span>
+                                </div>
+                                <p class="deposit-note"><i class="fas fa-info-circle"></i> 50% deposit required to start project</p>
+                            </div>
+
+                            <div class="payment-method">
+                                <h3>Payment Method</h3>
+                                <div class="payment-options">
+                                    <label class="payment-option">
+                                        <input type="radio" name="paymentMethod" value="card" checked>
+                                        <div class="option-content">
+                                            <i class="fas fa-credit-card"></i>
+                                            <span>Credit/Debit Card</span>
+                                        </div>
+                                    </label>
+                                    <label class="payment-option">
+                                        <input type="radio" name="paymentMethod" value="bank">
+                                        <div class="option-content">
+                                            <i class="fas fa-university"></i>
+                                            <span>Bank Transfer</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Security Notice -->
+                            <div class="security-notice" id="securityNotice" style="display: none;">
+                                <!-- Maintenance Warning -->
+                                <div style="background: rgba(255, 69, 58, 0.15); border-left: 4px solid #ff453a; padding: 1.5rem; margin-bottom: 2rem; border-radius: 8px;">
+                                    <p style="margin: 0; font-size: 1.6rem; color: #ff453a; line-height: 1.6; font-weight: 600;">
+                                        <i class="fas fa-exclamation-triangle" style="margin-right: 0.8rem;"></i>
+                                        Credit/Debit Card Payment Temporarily Unavailable
+                                    </p>
+                                    <p style="margin: 1rem 0 0; font-size: 1.4rem; color: rgba(255, 255, 255, 0.9); line-height: 1.6;">
+                                        We're currently experiencing technical difficulties with our card payment processor. 
+                                        Please use <strong style="color: #0ef;">Bank Transfer</strong> as your payment method for now.
+                                    </p>
+                                    <p style="margin: 1rem 0 0; font-size: 1.3rem; color: rgba(255, 255, 255, 0.7);">
+                                        <i class="fas fa-tools" style="color: #ff453a; margin-right: 0.5rem;"></i>
+                                        We apologize for the inconvenience and are working to restore card payments as soon as possible.
+                                    </p>
+                                </div>
+                                <!-- Security Info (hidden during maintenance) -->
+                                <div style="background: rgba(0, 238, 255, 0.1); border-left: 4px solid #0ef; padding: 1.5rem; margin-bottom: 2rem; border-radius: 8px; display: none;">
+                                    <p style="margin: 0; font-size: 1.4rem; color: rgba(255, 255, 255, 0.9); line-height: 1.6;">
+                                        <i class="fas fa-shield-alt" style="color: #0ef; margin-right: 0.5rem;"></i>
+                                        <strong style="color: #0ef;">Secure Payment via Stripe:</strong> Your payment is processed securely through Stripe, 
+                                        a PCI-compliant payment processor trusted by millions worldwide. Your card details are never stored on our servers.
+                                    </p>
+                                    <p style="margin: 1rem 0 0; font-size: 1.3rem; color: rgba(255, 255, 255, 0.7);">
+                                        <i class="fas fa-info-circle" style="color: #0ef; margin-right: 0.5rem;"></i>
+                                        Test Mode: Use card <code style="background: rgba(0, 0, 0, 0.3); padding: 0.2rem 0.5rem; border-radius: 4px; color: #0ef;">4242 4242 4242 4242</code> 
+                                        with any future expiry and CVV.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- 3D Credit Card -->
+                            <div class="card-container" id="cardContainer">
+                                <div class="credit-card">
+                                    <div class="card-front">
+                                        <div class="card-chip"></div>
+                                        <div class="card-logo">
+                                            <i class="fab fa-cc-visa"></i>
+                                        </div>
+                                        <div class="card-number" id="cardNumberDisplay">
+                                            <span>****</span>
+                                            <span>****</span>
+                                            <span>****</span>
+                                            <span>****</span>
+                                        </div>
+                                        <div class="card-info">
+                                            <div class="card-holder">
+                                                <span class="label">Card Holder</span>
+                                                <span class="value" id="cardHolderDisplay">YOUR NAME</span>
+                                            </div>
+                                            <div class="card-expiry">
+                                                <span class="label">Expires</span>
+                                                <span class="value" id="cardExpiryDisplay">MM/YY</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-back">
+                                        <div class="card-strip"></div>
+                                        <div class="card-cvv">
+                                            <span class="label">CVV</span>
+                                            <span class="value" id="cardCvvDisplay">***</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-form" id="cardForm">
+                                <div class="form-group">
+                                    <label for="cardNumber">Card Number *</label>
+                                    <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" autocomplete="cc-number" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="cardName">Cardholder Name *</label>
+                                    <input type="text" id="cardName" name="cardName" placeholder="JOHN DOE" autocomplete="cc-name" required>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="cardExpiry">Expiry Date *</label>
+                                        <input type="text" id="cardExpiry" name="cardExpiry" placeholder="MM/YY" maxlength="5" autocomplete="cc-exp" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cardCvv">CVV *</label>
+                                        <input type="text" id="cardCvv" name="cardCvv" placeholder="123" maxlength="3" autocomplete="cc-csc" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bank-info" id="bankInfo" style="display: none;">
+                                <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                                    <div style="background: #EC1D24; padding: 1.2rem 2.5rem; border-radius: 10px; display: inline-flex; align-items: center; box-shadow: 0 4px 15px rgba(236, 29, 36, 0.3);">
+                                        <svg width="120" height="30" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <text x="10" y="35" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white">Scotiabank</text>
+                                        </svg>
+                                    </div>
+                                    <h4 style="margin: 0; color: var(--main-color);">Bank Transfer Details</h4>
+                                </div>
+                                <div class="bank-details">
+                                    <p><strong>Bank Name:</strong> <span style="color: var(--main-color);">Scotiabank</span></p>
+                                    <p><strong>Account Name:</strong> Daniel Minto</p>
+                                    <p><strong>Account Number:</strong> <span style="color: var(--main-color); font-size: 1.8rem; letter-spacing: 2px;">000-8060-154</span></p>
+                                    <p><strong>Branch:</strong> Spanish Town</p>
+                                    <p class="note"><i class="fas fa-info-circle"></i> Please use your order number as reference when making transfer</p>
+                                </div>
+                            </div>
+
+                            <div class="form-group terms">
+                                <label>
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    I agree to the <a href="Terms.html" target="_blank">Terms & Conditions</a> and <a href="Privacy.html" target="_blank">Privacy Policy</a>
+                                </label>
+                            </div>
+
+                            <div class="form-buttons">
+                                <button type="button" class="btn-prev" onclick="prevStep()">
+                                    <i class="fas fa-arrow-left"></i> Back
+                                </button>
+                                <button type="submit" class="btn-submit">
+                                    <i class="fas fa-check-circle"></i> Complete Order
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Progress Indicator -->
+                    <div class="progress-indicator">
+                        <div class="progress-step active" data-step="1">
+                            <div class="step-circle">1</div>
+                            <span>Project Info</span>
+                        </div>
+                        <div class="progress-step" data-step="2">
+                            <div class="step-circle">2</div>
+                            <span>Contact</span>
+                        </div>
+                        <div class="progress-step" data-step="3">
+                            <div class="step-circle">3</div>
+                            <span>Payment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="success-animation">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Order Placed Successfully!</h2>
+            <p>Your order number is: <strong id="orderNumber"></strong></p>
+            <p>We've sent a confirmation email to <strong id="confirmEmail"></strong></p>
+            <p class="status-note">Status: <span class="status-badge pending">Pending Review</span></p>
+            <p>You'll receive another email once your project is confirmed and started.</p>
+            <button onclick="closeModal()" class="btn-close">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background: #323946; padding: 2rem 5%; text-align: center; border-top: 2px solid rgba(0, 238, 255, 0.2);">
+        <p style="color: rgba(255, 255, 255, 0.8); font-size: 1.4rem; margin-bottom: 1rem;">
+            Copyright &copy; 2025 by Minto's Web Design | All Rights Reserved.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+            <a href="Terms.html" style="color: #0ef; text-decoration: none; font-size: 1.4rem; transition: all 0.3s;">Terms & Conditions</a>
+            <span style="color: rgba(255, 255, 255, 0.5);">|</span>
+            <a href="Privacy.html" style="color: #0ef; text-decoration: none; font-size: 1.4rem; transition: all 0.3s;">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Stripe.js -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="Order.js"></script>
+</body>
+</html>

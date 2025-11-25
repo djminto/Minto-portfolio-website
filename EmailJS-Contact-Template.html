@@ -1,0 +1,167 @@
+<!-- 
+================================================================
+EMAILJS TEMPLATE - CONTACT FORM NOTIFICATION
+================================================================
+Copy this entire code and paste it into your EmailJS dashboard template editor.
+This is the HTML template that will be sent to danielminto13@gmail.com when someone submits the contact form.
+
+Template Settings:
+- Template Name: contact_form_notification
+- To Email: danielminto13@gmail.com
+- From Name: {{from_name}}
+- Reply To: {{reply_to}}
+
+Required Variables (map these in EmailJS):
+- {{from_name}} = Client's name
+- {{from_email}} = Client's email  
+- {{reply_to}} = Client's email (for replies)
+- {{phone}} = Client's phone
+- {{subject}} = Message subject
+- {{message}} = Message content
+================================================================
+-->
+
+<div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 0 auto; background: linear-gradient(135deg, #1f242d 0%, #323946 100%); color: #ffffff; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);">
+    
+    <!-- Header -->
+    <div style="background: linear-gradient(135deg, #0ef 0%, #00a8ff 100%); padding: 30px; text-align: center; border-bottom: 3px solid #0ef;">
+        <h1 style="margin: 0; font-size: 28px; color: #1f242d; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
+            💬 New Contact Message
+        </h1>
+        <p style="margin: 10px 0 0; font-size: 14px; color: #1f242d; opacity: 0.9;">
+            You've received a new inquiry from your website
+        </p>
+    </div>
+    
+    <!-- Main Content -->
+    <div style="padding: 40px 30px;">
+        
+        <!-- Intro Text -->
+        <p style="font-size: 16px; line-height: 1.6; color: rgba(255, 255, 255, 0.9); margin-bottom: 30px;">
+            A potential client has reached out through your contact form. Here are the details:
+        </p>
+        
+        <!-- Contact Details Card -->
+        <div style="background: rgba(0, 238, 255, 0.1); border-left: 4px solid #0ef; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+            
+            <!-- Name -->
+            <div style="margin-bottom: 20px;">
+                <table role="presentation" style="width: 100%; border-collapse: collapse;">
+                    <tr>
+                        <td style="vertical-align: top; width: 30px;">
+                            <span style="font-size: 20px;">👤</span>
+                        </td>
+                        <td style="vertical-align: top;">
+                            <div style="margin-bottom: 5px;">
+                                <strong style="color: #0ef; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Name</strong>
+                            </div>
+                            <div style="font-size: 18px; color: #ffffff;">
+                                {{from_name}}
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Email -->
+            <div style="margin-bottom: 20px;">
+                <table role="presentation" style="width: 100%; border-collapse: collapse;">
+                    <tr>
+                        <td style="vertical-align: top; width: 30px;">
+                            <span style="font-size: 20px;">📧</span>
+                        </td>
+                        <td style="vertical-align: top;">
+                            <div style="margin-bottom: 5px;">
+                                <strong style="color: #0ef; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Email</strong>
+                            </div>
+                            <div style="font-size: 18px;">
+                                <a href="mailto:{{reply_to}}" style="color: #00a8ff; text-decoration: none; border-bottom: 2px solid #00a8ff;">
+                                    {{from_email}}
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Phone -->
+            <div style="margin-bottom: 20px;">
+                <table role="presentation" style="width: 100%; border-collapse: collapse;">
+                    <tr>
+                        <td style="vertical-align: top; width: 30px;">
+                            <span style="font-size: 20px;">📱</span>
+                        </td>
+                        <td style="vertical-align: top;">
+                            <div style="margin-bottom: 5px;">
+                                <strong style="color: #0ef; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Phone</strong>
+                            </div>
+                            <div style="font-size: 18px;">
+                                <a href="tel:{{phone}}" style="color: #00a8ff; text-decoration: none;">
+                                    {{phone}}
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Subject -->
+            <div>
+                <table role="presentation" style="width: 100%; border-collapse: collapse;">
+                    <tr>
+                        <td style="vertical-align: top; width: 30px;">
+                            <span style="font-size: 20px;">📋</span>
+                        </td>
+                        <td style="vertical-align: top;">
+                            <div style="margin-bottom: 5px;">
+                                <strong style="color: #0ef; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Subject</strong>
+                            </div>
+                            <div style="font-size: 18px; color: #ffffff;">
+                                {{subject}}
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+        </div>
+        
+        <!-- Message Card -->
+        <div style="background: #323946; border: 2px solid rgba(0, 238, 255, 0.3); border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+            <table role="presentation" style="width: 100%; border-collapse: collapse;">
+                <tr>
+                    <td style="vertical-align: top; width: 32px;">
+                        <span style="font-size: 22px;">💬</span>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <strong style="color: #0ef; font-size: 16px; text-transform: uppercase; letter-spacing: 1px;">Message</strong>
+                    </td>
+                </tr>
+            </table>
+            <div style="margin-top: 15px; font-size: 16px; line-height: 1.8; color: rgba(255, 255, 255, 0.9); padding: 15px; background: rgba(0, 0, 0, 0.2); border-radius: 8px; white-space: pre-wrap;">{{message}}</div>
+        </div>
+        
+        <!-- Action Button -->
+        <table role="presentation" style="width: 100%; border-collapse: collapse; margin-top: 30px;">
+            <tr>
+                <td style="text-align: center;">
+                    <a href="mailto:{{reply_to}}?subject=Re: {{subject}}" style="display: inline-block; background: linear-gradient(135deg, #0ef 0%, #00a8ff 100%); color: #1f242d; font-size: 16px; font-weight: bold; padding: 15px 40px; border-radius: 50px; text-decoration: none; box-shadow: 0 5px 20px rgba(0, 238, 255, 0.4);">
+                        📧 Reply to {{from_name}}
+                    </a>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+    
+    <!-- Footer -->
+    <div style="background: #1f242d; padding: 25px; text-align: center; border-top: 2px solid rgba(0, 238, 255, 0.2);">
+        <p style="margin: 0 0 10px; font-size: 14px; color: rgba(255, 255, 255, 0.7);">
+            This message was sent from your portfolio website contact form
+        </p>
+        <p style="margin: 0; font-size: 13px; color: rgba(255, 255, 255, 0.5);">
+            © 2025 Minto's Web Development | All Rights Reserved
+        </p>
+    </div>
+    
+</div>
