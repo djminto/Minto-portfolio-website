@@ -9,7 +9,7 @@ function checkAuth() {
     const user = JSON.parse(currentUser);
     if (user.role !== 'admin') {
         alert('Access Denied: Admin privileges required');
-        window.location.href = 'Homepage.html';
+        window.location.href = 'index.html';
         return null;
     }
     

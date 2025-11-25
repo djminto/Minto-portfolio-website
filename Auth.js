@@ -107,7 +107,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
             if (user.role === 'admin') {
                 window.location.href = 'Dashboard.html';
             } else {
-                window.location.href = 'Homepage.html';
+                window.location.href = 'index.html';
             }
         }, 3000);
     } else {

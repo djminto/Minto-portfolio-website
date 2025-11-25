@@ -634,7 +634,7 @@ async function sendOrderNotification(orderData) {
 // Close Modal
 function closeModal() {
     document.getElementById('successModal').classList.remove('show');
-    window.location.href = 'Homepage.html';
+    window.location.href = 'index.html';
 }
 
 // Close modal on outside click
